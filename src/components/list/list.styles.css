@@ -1,0 +1,92 @@
+.list-container {
+  width: clamp(300px, 40%, 700px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  background-color: var(--baseClrBehindTasks);
+  border-radius: 8px;
+  margin-top: 30px;
+  padding: 1rem 2rem;
+  gap: 5px;
+  word-wrap: break-word;
+}
+
+.list-item-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.list-item {
+  background-color: white;
+  width: 80%;
+  height: clamp(30px, 2rem, 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+
+.checkbox-incomplete {
+  color: black;
+  width: 1rem;
+  aspect-ratio: 1 / 1;
+  background-color: var(--baseClrBehindTasks);
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.checkbox-complete {
+  font-size: .75rem;
+  color: white;
+  width: 1rem;
+  aspect-ratio: 1 / 1;
+  background-color: var(--mainClrGreen);
+  border: 1px solid black;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.list-item-text-incomplete {
+  width: 80%;
+  margin-left: 10px;
+}
+
+.list-item-text-complete {
+  width: 80%;
+  margin-left: 10px;
+  text-decoration: line-through;
+}
+
+.edit-input {
+  margin-left: 20px;
+}
+
+.finish-edit-btn {
+  color: var(--baseClrBehindTasks);
+  background-color: var(--baseClrDark);
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 3px;
+  margin-left: 10px;
+}
+
+.square-pen-icon {
+  color: var(--mainClrBlue);
+  margin-left: auto;
+  background: transparent;
+  border: none;
+}
+.trash-can-icon {
+  color: var(--baseClrDanger);
+  margin-left: auto;
+  background: transparent;
+  border: none;
+}
+
+

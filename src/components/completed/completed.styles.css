@@ -1,0 +1,65 @@
+.completed-container {
+  width: clamp(300px, 40%, 700px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;  
+  background-color: var(--baseClrBehindTasks);
+  border-radius: 8px;
+  margin-top: 30px;
+  padding: 1rem 2rem;
+  gap: 5px;
+  word-wrap: break-word;
+}
+
+.completed-item-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.completed-item {
+  background-color: var(--mainClrGreen);
+  width: 80%;
+  height: clamp(30px, 2rem, 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 8px;
+} 
+
+.checkbox {
+  font-size: .75rem;
+  color: white;
+  width: 1rem;
+  aspect-ratio: 1 / 1;
+  background-color: var(--baseClrDark);
+  border: 1px solid black;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.completed-item-text {
+  color: var(--baseClrBgGradient);
+  width: 80%;
+  margin-left: 10px;
+}
+
+.button-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-all-btn {
+  width: 15%;
+  aspect-ratio: 6 / 1;
+  margin-top: 50px;
+  color: var(--baseClrBgGradient);
+  background-color: var(--baseClrDark);
+  border-radius: 100vmax;
+}
