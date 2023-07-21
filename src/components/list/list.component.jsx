@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
 import '../list/list.styles.css';
@@ -35,9 +35,16 @@ function List({ listItems, setListItems }) {
     return setListItems([...listItems].filter((item) => item.id !== id));
   };
 
+  useEffect(() => {
+    listItems.length > 0 ? 
+      document.documentElement.style.setProperty('--disappear', 'flex')
+      :
+      document.documentElement.style.setProperty('--disappear', 'none')
+  }, [listItems]);
+
   return (
     <div className="list-container">
-      {listItems.map((todo, index) => {
+      {listItems.map((todo) => {
         const task = todo.task;
         const id = todo.id;
         const completed = todo.completed;

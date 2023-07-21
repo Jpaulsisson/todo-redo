@@ -2,6 +2,7 @@ import '../completed/completed.styles.css';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { useEffect } from 'react';
 
 function Completed({ listItems, setListItems }) {
   const completedItems = listItems.filter((item) => item.completed === true);
@@ -13,6 +14,13 @@ function Completed({ listItems, setListItems }) {
   const deleteAll = () => {
     return setListItems([...listItems].filter((item) => item.completed !== true));
   }
+
+  useEffect(() => {
+    completedItems.length > 0 ? 
+      document.documentElement.style.setProperty('--disappearCompleted', 'flex')
+      :
+      document.documentElement.style.setProperty('--disappearCompleted', 'none')
+  }, [completedItems]);
 
   return (
     <>

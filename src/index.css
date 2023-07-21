@@ -9,6 +9,9 @@
 
   --inputAndListItemWidth: 300px;
   --inputAndListItemHeight: 20px;
+
+  --disappear: none;
+  --disappearCompleted: none;
 }
 
 *,

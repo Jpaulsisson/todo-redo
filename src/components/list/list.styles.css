@@ -1,7 +1,7 @@
 .list-container {
   width: clamp(300px, 40%, 700px);
   margin: 0 auto;
-  display: flex;
+  display: var(--disappear);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -88,5 +88,3 @@
   background: transparent;
   border: none;
 }
-
-
